@@ -1,0 +1,20 @@
+# TrackFlow Website SEO Configuration
+# https://www.trackflow.example/
+
+User-agent: *
+Allow: /
+
+# Disallow private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Allow search engines to crawl styles and scripts
+Allow: /styles.css
+Allow: /main.js
+
+# Sitemap location
+Sitemap: https://www.trackflow.example/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
