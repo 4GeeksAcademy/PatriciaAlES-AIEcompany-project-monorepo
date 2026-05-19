@@ -1,388 +1,792 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-    <meta name="description" content="TrackFlow: logística de última milla, almacenes y e-commerce para México y España. Soluciones B2B con tracking inteligente, logística inversa y gestión de 3PL." />
-    <meta name="keywords" content="logística última milla, almacén, e-commerce, tracking inteligente, logística inversa, 3PL, operación binacional México España, warehouse management" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="Spanish" />
-    <meta name="author" content="TrackFlow" />
-    <title>TrackFlow | Logística Inteligente, Última Milla y Almacenes México-España</title>
-    <link rel="canonical" href="https://www.trackflow.example" />
-    <link rel="stylesheet" href="./styles.css" />
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.trackflow.example" />
-    <meta property="og:title" content="TrackFlow | Logística Inteligente de Última Milla y Almacenes" />
-    <meta property="og:description" content="Soluciones logísticas B2B para e-commerce: última milla, almacenes, tracking en tiempo real. Operación binacional México-España." />
-    <meta property="og:image" content="https://www.trackflow.example/og-image.jpg" />
-    <meta property="og:locale" content="es_ES" />
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://www.trackflow.example" />
-    <meta name="twitter:title" content="TrackFlow | Logística Inteligente México-España" />
-    <meta name="twitter:description" content="Soluciones logísticas B2B: última milla, almacenes, e-commerce, tracking inteligente." />
-    <meta name="twitter:image" content="https://www.trackflow.example/twitter-image.jpg" />
-    
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "TrackFlow",
-        "url": "https://www.trackflow.example",
-        "logo": "https://www.trackflow.example/logo.svg",
-        "description": "TrackFlow ofrece soluciones logísticas de última milla, almacenes inteligentes y gestión de e-commerce con tracking en tiempo real.",
-        "sameAs": [
-          "https://www.linkedin.com/company/trackflow",
-          "https://twitter.com/trackflow"
-        ],
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "contactType": "customer support",
-            "email": "info@trackflow.example",
-            "telephone": "+52 55 1234 5678",
-            "areaServed": ["MX", "ES"]
-          }
-        ],
-        "areaServed": [
-          {
-            "@type": "Country",
-            "name": "Mexico"
-          },
-          {
-            "@type": "Country",
-            "name": "Spain"
-          }
-        ],
-        "address": {
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="description"
+    content="TrackFlow ofrece gestión de almacenes, entregas de última milla y logística inversa para marcas de e-commerce en Estados Unidos y España." />
+  <meta name="keywords"
+    content="TrackFlow, logística e-commerce, gestión de almacenes, última milla, logística inversa, Los Ángeles, Zaragoza, Estados Unidos, España, 3PL" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="Spanish" />
+  <meta name="author" content="TrackFlow" />
+  <title>TrackFlow | Logística que escala con tu e-commerce</title>
+  <link rel="canonical" href="https://trackflow.com" />
+  <link rel="stylesheet" href="./styles.css" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://trackflow.com" />
+  <meta property="og:title" content="TrackFlow | Logística que escala con tu e-commerce" />
+  <meta property="og:description"
+    content="Gestión de almacenes, última milla y logística inversa en Estados Unidos y España para marcas de e-commerce." />
+  <meta property="og:image" content="https://trackflow.com/og-image.jpg" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://trackflow.com" />
+  <meta name="twitter:title" content="TrackFlow | Logística e-commerce en Estados Unidos y España" />
+  <meta name="twitter:description" content="Gestión de almacenes, última milla y logística inversa para e-commerce." />
+  <meta name="twitter:image" content="https://trackflow.com/twitter-image.jpg" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TrackFlow",
+      "description": "Gestión de almacenes y entregas de última milla para e-commerce",
+      "url": "https://trackflow.com",
+      "foundingDate": "2009",
+      "address": [
+        {
           "@type": "PostalAddress",
-          "addressCountry": "MX"
+          "addressCountry": "US",
+          "addressLocality": "Los Ángeles",
+          "addressRegion": "California"
+        },
+        {
+          "@type": "PostalAddress",
+          "addressCountry": "ES",
+          "addressLocality": "Zaragoza",
+          "addressRegion": "Aragón"
         }
-      }
-    </script>
-    
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Inicio",
-            "item": "https://www.trackflow.example/#inicio"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Servicios",
-            "item": "https://www.trackflow.example/#servicios"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Cobertura",
-            "item": "https://www.trackflow.example/#cobertura"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Contacto",
-            "item": "https://www.trackflow.example/#contacto"
-          }
-        ]
-      }
-    </script>
-  </head>
-  <body class="bg-slate-50 text-slate-900">
-    <a class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-white px-4 py-2 shadow" href="#main">Saltar al contenido</a>
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-213-555-0147",
+        "contactType": "sales",
+        "availableLanguage": ["Spanish", "English"]
+      },
+      "sameAs": ["https://linkedin.com/company/trackflow"],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Estados Unidos"
+        },
+        {
+          "@type": "Country",
+          "name": "Spain"
+        }
+      ]
+    }
+  </script>
+</head>
 
-    <header class="border-b border-slate-200 bg-white shadow-sm">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
-        <a href="#inicio" class="text-lg font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-md px-2 py-1" aria-label="TrackFlow - Ir al inicio">TrackFlow</a>
-        <button id="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" class="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white p-2 text-slate-700 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-cyan-500 md:hidden" aria-label="Abrir menú de navegación">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M4 7h16M4 12h16M4 17h16"></path>
-          </svg>
-        </button>
-        <nav id="primary-navigation" aria-label="Navegación principal" class="md:block">
-          <ul class="hidden w-full flex-col gap-3 text-base font-medium text-slate-700 md:flex md:flex-row md:gap-4">
-            <li><a href="#inicio" class="hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-md px-2 py-2" title="Ir al inicio de TrackFlow">Inicio</a></li>
-            <li><a href="#servicios" class="hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-md px-2 py-2" title="Ver servicios de logística última milla y almacenes">Servicios</a></li>
-            <li><a href="#cobertura" class="hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-md px-2 py-2" title="Cobertura logística en México y España">Cobertura</a></li>
-            <li><a href="#contacto" class="hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-md px-2 py-2" title="Contacta con TrackFlow para solicitar información">Contacto</a></li>
-          </ul>
-        </nav>
+<body class="bg-white text-slate-900">
+  <a class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-white px-4 py-2 shadow"
+    href="#main">
+    Saltar al contenido
+  </a>
+
+  <header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 shadow-sm backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-8 lg:px-8">
+      <a href="#inicio"
+        class="text-2xl font-black tracking-tight text-slate-950 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-md px-2 py-1"
+        aria-label="TrackFlow - Ir al inicio">
+        Track<span class="text-cyan-500">Flow</span>
+      </a>
+
+      <button id="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"
+        class="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white p-2 text-slate-700 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-cyan-500 md:hidden"
+        aria-label="Abrir menú de navegación">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+
+      <nav id="primary-navigation" aria-label="Navegación principal" class="md:block">
+        <ul class="hidden w-full flex-col gap-3 text-base font-semibold text-slate-700 md:flex md:flex-row md:gap-8">
+          <li><a href="#inicio"
+              class="hover:text-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-md px-2 py-2">Inicio</a>
+          </li>
+          <li><a href="#servicios"
+              class="hover:text-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-md px-2 py-2">Servicios</a>
+          </li>
+          <li><a href="#cobertura"
+              class="hover:text-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-md px-2 py-2">Cobertura</a>
+          </li>
+          <li><a href="#contacto"
+              class="text-cyan-600 hover:text-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-md px-2 py-2">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="inicio" class="relative overflow-hidden bg-slate-950 text-white">
+      <div
+        class="absolute inset-0 bg-[url('https://www.savoye.com/wp-content/uploads/2025/08/HeroWMSAutomatisation.webp')] bg-cover bg-center opacity-35">
       </div>
-    </header>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/20"></div>
 
-    <main id="main">
-      <section id="inicio" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white">
-        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-24">
-          <div class="max-w-2xl">
-            <p class="mb-4 inline-flex rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-semibold uppercase tracking-[0.25em] text-cyan-200">Logística y tecnología B2B</p>
-            <h1 class="text-4xl font-semibold tracking-tight sm:text-5xl">Logística inteligente para última milla y almacén entre México y España</h1>
-            <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Conecta tus operaciones con tracking en tiempo real, dashboards de control y una red binacional diseñada para empresas exigentes.</p>
-            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="#contacto" class="inline-flex w-full items-center justify-center rounded-full bg-cyan-500 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-cyan-400 sm:w-auto" title="Solicita información de nuestras soluciones logísticas">Solicitar información</a>
-              <a href="#servicios" class="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-base font-semibold text-white transition hover:border-white hover:bg-white/20 sm:w-auto" title="Conoce nuestros servicios de última milla, almacenes y tracking">Ver servicios</a>
-            </div>
-          </div>
-          <div class="mt-12 lg:mt-0 lg:w-1/2">
-            <div class="relative mx-auto max-w-md overflow-hidden rounded-3xl bg-slate-900/70 p-6 shadow-2xl ring-1 ring-white/10 sm:p-8">
-              <div class="flex items-center gap-4 text-sm text-slate-300">
-                <span class="inline-flex h-3 w-3 rounded-full bg-emerald-400"></span>
-                <span>Tracking 24/7</span>
-                <span class="h-1 w-1 rounded-full bg-slate-500"></span>
-                <span>Operación México - España</span>
-              </div>
-              <div class="mt-8">
-                <div class="grid gap-4 sm:grid-cols-2">
-                  <article class="rounded-3xl bg-slate-800/90 p-5">
-                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Dashboard</p>
-                    <p class="mt-3 text-sm leading-6 text-slate-300">Visibilidad en tiempo real de tus envíos y almacenes.</p>
-                  </article>
-                  <article class="rounded-3xl bg-slate-800/90 p-5">
-                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Rutas</p>
-                    <p class="mt-3 text-sm leading-6 text-slate-300">Control de rutas y entregas con precisión binacional.</p>
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="servicios" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div
+        class="relative mx-auto grid max-w-7xl gap-12 px-6 py-24 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:py-32">
         <div class="max-w-2xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-600">Servicios</p>
-          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Soluciones logísticas completas: última milla, almacenes y e-commerce</h2>
-          <p class="mt-4 text-lg leading-8 text-slate-600">Desde logística de última milla hasta gestión de almacenes, warehouse management y logística inversa, TrackFlow integra tecnología y operación para empresas B2B que requieren eficiencia en su cadena de suministro.</p>
-        </div>
-        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-xl font-semibold text-slate-900">Logística de Última Milla Eficiente</h3>
-            <p class="mt-3 text-slate-600">Entrega rápida y confiable con tracking en tiempo real. Soluciones especializadas en e-commerce y logística de distribución final.</p>
-          </article>
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-xl font-semibold text-slate-900">Gestión de Almacenes y Warehouse Management</h3>
-            <p class="mt-3 text-slate-600">Operaciones de almacén optimizadas: picking, packing, cross-docking y preparación de pedidos. Gestión de inventario inteligente.</p>
-          </article>
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-xl font-semibold text-slate-900">Tracking Inteligente y Visibilidad</h3>
-            <p class="mt-3 text-slate-600">Dashboards en tiempo real y análisis de datos para decisiones logísticas precisas. Transparencia de envíos 24/7.</p>
-          </article>
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-xl font-semibold text-slate-900">Operación Binacional México-España</h3>
-            <p class="mt-3 text-slate-600">Sincronización de rutas, almacenes y distribución internacional. Soluciones logísticas transnacionales integradas.</p>
-          </article>
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-xl font-semibold text-slate-900">Integración B2B y 3PL</h3>
-            <p class="mt-3 text-slate-600">Servicios de tercero logístico (3PL) con control total, trazabilidad y cumplimiento normativo. APIs integradas.</p>
-          </article>
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-xl font-semibold text-slate-900">Soporte Operativo y Consultoría</h3>
-            <p class="mt-3 text-slate-600">Asesoría especializada en logística inversa, optimización de costos y eficiencia de cadena de suministro.</p>
-          </article>
-        </div>
-      </section>
+          <p
+            class="mb-6 inline-flex rounded-full bg-cyan-500/15 px-4 py-2 text-sm font-black uppercase tracking-[0.22em] text-cyan-300">
+            Plataforma logística B2B
+          </p>
 
-      <section id="cobertura" class="border-t border-slate-200 bg-slate-50 px-4 py-16 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-7xl">
-          <div class="grid grid-cols-1 gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-            <div>
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-600">Cobertura</p>
-              <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Red de Logística Binacional: México y España</h2>
-              <p class="mt-4 text-lg leading-8 text-slate-600">Red logística integrada con capacidades de envío terrestre, almacenes estratégicos y seguimiento de distribución. Soluciones de e-commerce y distribución B2B para comercio internacional.</p>
-              <ul class="mt-8 space-y-4 text-slate-700">
-                <li class="flex gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-cyan-500"></span>Rutas optimizadas entre almacenes, centros de distribución y centros de control logístico.</li>
-                <li class="flex gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-cyan-500"></span>Visibilidad completa de envíos, almacenamiento y reabastecimiento en tiempo real.</li>
-                <li class="flex gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-cyan-500"></span>Soporte local especializado en ambas regiones para operaciones logísticas fluidas.</li>
-              </ul>
-            </div>
-            <div class="rounded-3xl bg-white p-8 shadow-sm">
-              <div class="min-h-[220px] rounded-3xl bg-slate-900/5 p-6 text-slate-400 flex items-center justify-center" role="img" aria-label="Mapa ilustrativo de cobertura logística México - España con rutas de distribución">Mapa ilustrativo de cobertura logística México - España</div>
-            </div>
+          <h1 class="text-5xl font-black leading-[1.04] tracking-tight sm:text-6xl lg:text-7xl">
+            Logística que <span class="text-cyan-400">escala</span> con tu e-commerce
+          </h1>
+
+          <p class="mt-8 max-w-2xl text-lg leading-9 text-slate-100">
+            Gestión de almacenes, entregas de última milla y logística inversa en Estados Unidos y España. Más de 15
+            años ayudando a marcas de moda, electrónica y cosmética a crecer sin preocuparse por la operación.
+          </p>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a href="#contacto"
+              class="inline-flex w-full items-center justify-center rounded-2xl bg-cyan-500 px-7 py-4 text-base font-bold text-white shadow-xl shadow-cyan-950/40 transition hover:bg-cyan-400 sm:w-auto">
+              Solicitar información
+            </a>
+            <a href="#servicios"
+              class="inline-flex w-full items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-7 py-4 text-base font-bold text-white shadow-lg backdrop-blur-md transition hover:bg-white/10 sm:w-auto">
+              Ver servicios
+            </a>
           </div>
         </div>
-      </section>
 
-      <section id="razones" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div class="max-w-2xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-600">Por qué TrackFlow</p>
-          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Confianza B2B: Logística Integrada y Tecnología Operativa</h2>
-          <p class="mt-4 text-lg leading-8 text-slate-600">Nuestras soluciones logísticas están diseñadas para empresas que necesitan control absoluto, previsibilidad operativa y eficiencia en la cadena de suministro. Somos tu socio 3PL de confianza.</p>
-        </div>
-        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-          <article class="rounded-3xl bg-slate-950/95 px-6 py-8 text-white shadow-lg">
-            <h3 class="text-xl font-semibold">Visibilidad Total en Tiempo Real</h3>
-            <p class="mt-3 text-slate-300">Dashboards logísticos con datos operativos clave: tracking de envíos, estado de almacenes, seguimiento de rutas.</p>
-          </article>
-          <article class="rounded-3xl bg-slate-100 px-6 py-8 shadow-sm">
-            <h3 class="text-xl font-semibold text-slate-900">Cobertura Estratégica Binacional</h3>
-            <p class="mt-3 text-slate-600">Logística integrada para comercio internacional. Rutas optimizadas México-España con sincronización de almacenes.</p>
-          </article>
-          <article class="rounded-3xl bg-slate-100 px-6 py-8 shadow-sm">
-            <h3 class="text-xl font-semibold text-slate-900">Cumplimiento y Seguridad</h3>
-            <p class="mt-3 text-slate-600">Procesos documentados, operación alineada a requisitos B2B, logística inversa controlada y trazabilidad completa.</p>
-          </article>
-          <article class="rounded-3xl bg-slate-950/95 px-6 py-8 text-white shadow-lg">
-            <h3 class="text-xl font-semibold">Soporte Especializado en Logística</h3>
-            <p class="mt-3 text-slate-300">Equipo experto en 3PL, warehouse management, e-commerce y optimización de cadena de suministro.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contacto" class="border-t border-slate-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-7xl">
-          <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-            <div class="rounded-3xl bg-slate-950/95 p-6 text-white shadow-2xl sm:p-10">
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Contacto</p>
-              <h2 class="mt-3 text-3xl font-semibold tracking-tight">Solicita información y planifica tu operación binacional</h2>
-              <p class="mt-4 text-lg leading-8 text-slate-300">Completa el formulario para recibir una propuesta personalizada de nuestra red logística.</p>
-              <div class="mt-8 space-y-4 text-slate-300">
-                <p><strong>Correo:</strong> info@trackflow.example</p>
-                <p><strong>Teléfono:</strong> +52 55 1234 5678</p>
-                <p><strong>Regiones:</strong> México y España</p>
-              </div>
+        <div class="relative">
+          <div
+            class="mx-auto max-w-2xl rounded-[2rem] bg-slate-950/55 p-6 shadow-2xl ring-1 ring-white/10 backdrop-blur-xl sm:p-8">
+            <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-slate-100">
+              <span class="inline-flex h-3 w-3 rounded-full bg-emerald-400"></span>
+              <span>Tracking 24/7</span>
+              <span class="text-slate-500">|</span>
+              <span>Estados Unidos - España</span>
             </div>
-            <form id="contacto-form" class="rounded-3xl bg-slate-50 p-4 shadow-sm ring-1 ring-slate-200 sm:p-6 lg:p-10" novalidate>
-              <div id="form-success" class="mb-6 hidden rounded-3xl bg-emerald-50 border border-emerald-200 p-4 text-emerald-900" role="status" aria-live="polite"></div>
-              <div class="mb-6">
-                <label for="empresa" class="block text-base font-semibold text-slate-900">Nombre de la empresa <span aria-label="requerido">*</span></label>
-                <input id="empresa" name="empresa" type="text" autocomplete="organization" required aria-describedby="error-empresa" class="mt-2 block w-full min-h-[48px] rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200" />
-                <p id="error-empresa" class="mt-2 hidden text-sm text-red-600">Por favor ingresa el nombre de la empresa.</p>
-              </div>
 
-              <div class="mb-6">
-                <label for="contacto" class="block text-base font-semibold text-slate-900">Persona de contacto <span aria-label="requerido">*</span></label>
-                <input id="contacto" name="contacto" type="text" autocomplete="name" required aria-describedby="error-contacto" class="mt-2 block w-full min-h-[48px] rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200" />
-                <p id="error-contacto" class="mt-2 hidden text-sm text-red-600">Indica la persona de contacto responsable.</p>
-              </div>
+            <div class="mt-8 grid gap-5 sm:grid-cols-2">
+              <article class="rounded-2xl bg-white/10 p-6 ring-1 ring-white/10">
+                <p class="text-sm font-semibold text-slate-200">Pedidos en curso</p>
+                <p class="mt-4 text-4xl font-black text-white">1,248</p>
+                <p class="mt-1 text-sm font-semibold text-slate-300">+12% vs ayer</p>
+                <svg viewBox="0 0 180 70" class="mt-6 h-16 w-full text-cyan-400" fill="none" aria-hidden="true">
+                  <path d="M5 55 L25 45 L42 52 L60 34 L78 42 L98 28 L118 37 L138 15 L158 42 L175 25"
+                    stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </article>
 
-              <div class="grid gap-6 lg:grid-cols-2">
-                <div class="mb-6">
-                  <label for="email" class="block text-base font-semibold text-slate-900">Email corporativo <span aria-label="requerido">*</span></label>
-                  <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="error-email" class="mt-2 block w-full min-h-[48px] rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200" />
-                  <p id="error-email" class="mt-2 hidden text-sm text-red-600">Ingresa un correo electrónico válido.</p>
-                </div>
-                <div class="mb-6">
-                  <label for="telefono" class="block text-base font-semibold text-slate-900">Teléfono <span aria-label="requerido">*</span></label>
-                  <input id="telefono" name="telefono" type="tel" autocomplete="tel" required aria-describedby="error-telefono" class="mt-2 block w-full min-h-[48px] rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200" />
-                  <p id="error-telefono" class="mt-2 hidden text-sm text-red-600">Proporciona un teléfono de contacto.</p>
-                </div>
-              </div>
+              <article class="rounded-2xl bg-white/10 p-6 ring-1 ring-white/10">
+                <p class="text-sm font-semibold text-slate-200">Entregas hoy</p>
+                <p class="mt-4 text-4xl font-black text-white">892</p>
+                <p class="mt-1 text-sm font-semibold text-slate-300">En tránsito</p>
+                <svg viewBox="0 0 180 70" class="mt-6 h-16 w-full text-cyan-400" fill="none" aria-hidden="true">
+                  <path d="M5 52 L25 58 L45 40 L65 48 L85 30 L105 43 L125 18 L145 35 L168 21" stroke="currentColor"
+                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </article>
+            </div>
 
-              <div class="mb-6">
-                <label for="sitio" class="block text-base font-semibold text-slate-900">Sitio web de la empresa</label>
-                <input id="sitio" name="sitio" type="url" autocomplete="url" placeholder="https://" aria-describedby="error-sitio" class="mt-2 block w-full min-h-[48px] rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200" />
-                <p id="error-sitio" class="mt-2 hidden text-sm text-red-600">Escribe la dirección del sitio web de la empresa.</p>
-              </div>
+            <article class="mt-5 rounded-2xl bg-white/10 p-6 ring-1 ring-white/10">
+              <p class="text-sm font-bold text-slate-200">Estado de operación</p>
+              <div class="mt-5 grid gap-4 sm:grid-cols-3">
+                <div class="flex items-center gap-3">
+                  <span class="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-500/90">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                      stroke="currentColor" className="size-6">
+                      <path strokeLinecap="round" strokeLinejoin="round"
+                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
 
-              <div class="grid gap-6 lg:grid-cols-2">
-                <div class="mb-6">
-                  <label for="pais" class="block text-base font-semibold text-slate-900">País de operación principal <span aria-label="requerido">*</span></label>
-                  <select id="pais" name="pais" required aria-describedby="error-pais" class="mt-2 block w-full min-h-[48px] rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200">
-                    <option value="">Selecciona un país</option>
-                    <option value="MX">México</option>
-                    <option value="ES">España</option>
-                    <option value="US">Estados Unidos</option>
-                    <option value="OT">Otro</option>
-                  </select>
-                  <p id="error-pais" class="mt-2 hidden text-sm text-red-600">Selecciona tu país de operación principal.</p>
+                  </span>
+                  <div>
+                    <p class="text-sm font-bold">Almacenes</p>
+                    <p class="text-xs font-semibold text-emerald-300">Operativos</p>
+                  </div>
                 </div>
-                <div class="mb-6">
-                  <label for="producto" class="block text-base font-semibold text-slate-900">Tipo de producto</label>
-                  <input id="producto" name="producto" type="text" aria-describedby="error-producto" class="mt-2 block w-full min-h-[48px] rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200" />
-                  <p id="error-producto" class="mt-2 hidden text-sm text-red-600">Describe el tipo de producto principal.</p>
-                </div>
-              </div>
+                <div class="flex items-center gap-3">
+                  <span class="flex h-11 w-11 items-center justify-center rounded-full bg-cyan-500/90">
+                    <img
+                      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXRydWNrLWljb24gbHVjaWRlLXRydWNrIj48cGF0aCBkPSJNMTQgMThWNmEyIDIgMCAwIDAtMi0ySDRhMiAyIDAgMCAwLTIgMnYxMWExIDEgMCAwIDAgMSAxaDIiLz48cGF0aCBkPSJNMTUgMThIOSIvPjxwYXRoIGQ9Ik0xOSAxOGgyYTEgMSAwIDAgMCAxLTF2LTMuNjVhMSAxIDAgMCAwLS4yMi0uNjI0bC0zLjQ4LTQuMzVBMSAxIDAgMCAwIDE3LjUyIDhIMTQiLz48Y2lyY2xlIGN4PSIxNyIgY3k9IjE4IiByPSIyIi8+PGNpcmNsZSBjeD0iNyIgY3k9IjE4IiByPSIyIi8+PC9zdmc+"
+                      alt="" class="h-6 w-6 invert" />
+                  </span>
 
-              <div class="grid gap-6 lg:grid-cols-2">
-                <div class="mb-6">
-                  <label for="volumen" class="block text-base font-semibold text-slate-900">Volumen mensual estimado de envíos <span aria-label="requerido">*</span></label>
-                  <select id="volumen" name="volumen" required aria-describedby="error-volumen warning-volumen" class="mt-2 block w-full min-h-[48px] rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200">
-                    <option value="">Selecciona un rango</option>
-                    <option value="0-100">0 - 100 envíos</option>
-                    <option value="100-500">100 - 500 envíos</option>
-                    <option value="500-1000">500 - 1000 envíos</option>
-                    <option value="1000+">Más de 1000 envíos</option>
-                  </select>
-                  <p id="error-volumen" class="mt-2 hidden text-sm text-red-600">Selecciona un volumen estimado.</p>
-                  <p id="warning-volumen" class="mt-2 hidden text-sm text-amber-700">Tu volumen es bajo; podemos recomendar una solución ajustada al tamaño de tu operación.</p>
+                  <div>
+                    <p class="text-sm font-bold">Envíos</p>
+                    <p class="text-xs font-semibold text-cyan-300">En tránsito</p>
+                  </div>
                 </div>
-                <div class="mb-6">
-                  <label for="servicios" class="block text-base font-semibold text-slate-900">Servicios de interés <span aria-label="requerido">*</span></label>
-                  <select id="servicios" name="servicios" required aria-describedby="error-servicios" class="mt-2 block w-full min-h-[48px] rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200">
-                    <option value="">Selecciona un servicio</option>
-                    <option value="ultima-milla">Última milla</option>
-                    <option value="almacenaje">Almacenaje</option>
-                    <option value="tracking">Tracking inteligente</option>
-                    <option value="cross-docking">Cross-docking</option>
-                    <option value="integracion-b2b">Integración B2B</option>
-                  </select>
-                  <p id="error-servicios" class="mt-2 hidden text-sm text-red-600">Elige al menos un servicio de interés.</p>
+
+                <!-- <div class="flex items-center gap-3">
+                  <span class="flex h-11 w-11 items-center justify-center rounded-full bg-cyan-500/90">
+                    <img src="/assets/icon-truck.svg" alt="" class="h-6 w-6" />
+                  </span>
+                  <div>
+                    <p class="text-sm font-bold">Envíos</p>
+                    <p class="text-xs font-semibold text-cyan-300">En tránsito</p>
+                  </div>
+                </div> -->
+
+                <div class="flex items-center gap-3">
+                  <span class="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-500/90">
+                    <img src="/assets/icon-return.svg" alt="" class="h-6 w-6" />
+                  </span>
+                  <div>
+                    <p class="text-sm font-bold">Devoluciones</p>
+                    <p class="text-xs font-semibold text-emerald-300">En proceso</p>
+                  </div>
                 </div>
               </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-              <fieldset class="mb-6 rounded-3xl border border-slate-200 bg-white p-5">
-                <legend class="text-base font-semibold text-slate-900">¿Trabajas actualmente con otro 3PL?</legend>
-                <div class="mt-4 space-y-3 text-slate-700" role="group" aria-describedby="error-otro3pl">
-                  <label class="inline-flex min-h-[48px] items-center gap-3">
+    <section id="servicios" class="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-[0.85fr_1fr] lg:items-end">
+        <div>
+          <p class="text-sm font-black uppercase tracking-[0.22em] text-cyan-600">Servicios</p>
+          <h2 class="mt-4 text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">Soluciones logísticas para
+            marcas de e-commerce</h2>
+        </div>
+        <p class="text-lg leading-8 text-slate-700">TrackFlow integra almacenes, última milla y devoluciones para que tu
+          operación pueda crecer con control, visibilidad y procesos eficientes.</p>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 gap-8 md:grid-cols-3">
+
+  <!-- Gestión de almacenes -->
+  <article
+    class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/70 transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.8"
+      stroke="currentColor"
+      class="mb-7 h-14 w-14 text-cyan-500"
+      aria-hidden="true"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 21h16.5M4.5 3h15a.75.75 0 01.75.75V21H3.75V3.75A.75.75 0 014.5 3zm3 4.5h2.25v2.25H7.5V7.5zm0 4.5h2.25v2.25H7.5V12zm6.75-4.5h2.25v2.25h-2.25V7.5zm0 4.5h2.25v2.25h-2.25V12z"
+      />
+    </svg>
+
+    <h3 class="text-2xl font-black text-slate-950">
+      Gestión de Almacenes
+    </h3>
+
+    <ul class="mt-5 space-y-3 text-slate-700">
+      <li>• Almacenamiento, picking y packing</li>
+      <li>• Inventario en tiempo real</li>
+      <li>• Operamos almacenes en Los Ángeles y Zaragoza</li>
+    </ul>
+  </article>
+
+  <!-- Última milla -->
+  <article
+    class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/70 transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+  >
+    <img
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwNmI2ZDQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTQgMThWNmEyIDIgMCAwIDAtMi0ySDRhMiAyIDAgMCAwLTIgMnYxMWExIDEgMCAwIDAgMSAxaDIiLz48cGF0aCBkPSJNMTUgMThIOSIvPjxwYXRoIGQ9Ik0xOSAxOGgyYTEgMSAwIDAgMCAxLTF2LTMuNjVhMSAxIDAgMCAwLS4yMi0uNjI0bC0zLjQ4LTQuMzVBMSAxIDAgMCAwIDE3LjUyIDhIMTQiLz48Y2lyY2xlIGN4PSIxNyIgY3k9IjE4IiByPSIyIi8+PGNpcmNsZSBjeD0iNyIgY3k9IjE4IiByPSIyIi8+PC9zdmc+"
+      alt=""
+      class="mb-7 h-14 w-14"
+    />
+
+    <h3 class="text-2xl font-black text-slate-950">
+      Entregas de Última Milla
+    </h3>
+
+    <ul class="mt-5 space-y-3 text-slate-700">
+      <li>• Red de carriers certificados en ambos países</li>
+      <li>• Seguimiento unificado de envíos</li>
+      <li>• Gestión de incidencias y devoluciones</li>
+    </ul>
+  </article>
+
+  <!-- Logística inversa -->
+  <article
+    class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/70 transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.8"
+      stroke="currentColor"
+      class="mb-7 h-14 w-14 text-cyan-500"
+      aria-hidden="true"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M7 7h10a5 5 0 0 1 0 10H9M7 7l4-4M7 7l4 4"
+      />
+    </svg>
+
+    <h3 class="text-2xl font-black text-slate-950">
+      Logística Inversa
+    </h3>
+
+    <ul class="mt-5 space-y-3 text-slate-700">
+      <li>• Gestión completa de devoluciones</li>
+      <li>• Inspección y reacondicionamiento</li>
+      <li>• Integración con tu plataforma de ventas</li>
+    </ul>
+  </article>
+
+</div>
+    </section>
+
+    <section id="cobertura" class="bg-slate-50 px-6 py-24 sm:px-8 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-8 lg:grid-cols-[0.85fr_1fr] lg:items-end">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.22em] text-cyan-600">Cobertura</p>
+            <h2 class="mt-4 text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">Operación logística en
+              Estados Unidos y España</h2>
+          </div>
+          <p class="text-lg leading-8 text-slate-700">Infraestructura propia en dos mercados clave para marcas de
+            e-commerce que necesitan operar con alcance internacional y visibilidad logística.</p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">
+         <article class="relative min-h-[210px] overflow-hidden rounded-[2rem] bg-white p-8 shadow-xl shadow-slate-200/70 ring-1 ring-slate-200">
+
+  <div class="relative z-10">
+    <h3 class="text-2xl font-black text-slate-950">
+      Estados Unidos
+    </h3>
+
+    <ul class="mt-6 space-y-4 text-slate-700">
+      <li>◎ Almacén en Los Ángeles</li>
+      <li>◎ Cobertura nacional</li>
+      <li>◎ Carriers: UPS, FedEx, DHL</li>
+    </ul>
+  </div>
+
+<img
+  src="/assets/los-angeles-line.webp"
+  alt=""
+  class="absolute bottom-0 right-0 h-full w-1/2 object-cover opacity-20"
+/>
+
+</article>
+
+         <article class="relative min-h-[210px] overflow-hidden rounded-[2rem] bg-white p-8 shadow-xl shadow-slate-200/70 ring-1 ring-slate-200">
+
+  <div class="relative z-10">
+    <h3 class="text-2xl font-black text-slate-950">
+      España
+    </h3>
+
+    <ul class="mt-6 space-y-4 text-slate-700">
+      <li>◎ Almacén en Zaragoza</li>
+      <li>◎ Cobertura peninsular e islas</li>
+      <li>◎ Carriers: MRW, SEUR, DHL</li>
+    </ul>
+  </div>
+
+  <img
+    src="/assets/zaragoza-line.svg"
+    alt=""
+    class="absolute bottom-5 right-6 w-52 opacity-35"
+  />
+
+</article>
+        </div>
+      </div>
+    </section>
+
+    <section id="razones" class="mx-auto max-w-7xl px-6 py-24 sm:px-8 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="text-sm font-black uppercase tracking-[0.22em] text-cyan-600">Por qué TrackFlow</p>
+        <h2 class="mt-4 text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">Logística con infraestructura,
+          tecnología y especialización e-commerce</h2>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2">
+
+  <!-- Operación binacional -->
+  <article class="flex gap-6 rounded-[2rem] bg-white p-7 shadow-xl shadow-slate-200/70 ring-1 ring-slate-200">
+
+    <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-slate-950">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.8"
+        stroke="currentColor"
+        class="h-8 w-8 text-cyan-400"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 2.25c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9Zm0 0c2.485 2.485 3.75 5.485 3.75 9s-1.265 6.515-3.75 9m0-18c-2.485 2.485-3.75 5.485-3.75 9s1.265 6.515 3.75 9m-9-9h18"
+        />
+      </svg>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-black text-slate-950">
+        Operación binacional
+      </h3>
+
+      <p class="mt-2 text-slate-700">
+        Infraestructura propia en Estados Unidos y España para operaciones internacionales.
+      </p>
+    </div>
+
+  </article>
+
+  <!-- Equipo -->
+  <article class="flex gap-6 rounded-[2rem] bg-white p-7 shadow-xl shadow-slate-200/70 ring-1 ring-slate-200">
+
+    <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-slate-950">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.8"
+        stroke="currentColor"
+        class="h-8 w-8 text-cyan-400"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M18 18.72a8.94 8.94 0 0 0 3.74-.479 3 3 0 0 0-4.682-2.72m.94 3.198v-.75A2.25 2.25 0 0 0 15.75 15h-7.5A2.25 2.25 0 0 0 6 17.25v.75m12 0a9 9 0 1 1-12 0m12 0A8.966 8.966 0 0 0 12 15.75a8.966 8.966 0 0 0-6 2.25m12 0v1.5a2.25 2.25 0 0 1-2.25 2.25h-7.5A2.25 2.25 0 0 1 6 19.5V18m6-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+        />
+      </svg>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-black text-slate-950">
+        +130 profesionales
+      </h3>
+
+      <p class="mt-2 text-slate-700">
+        Equipo especializado en operaciones logísticas para marcas e-commerce.
+      </p>
+    </div>
+
+  </article>
+
+  <!-- Tecnología -->
+  <article class="flex gap-6 rounded-[2rem] bg-white p-7 shadow-xl shadow-slate-200/70 ring-1 ring-slate-200">
+
+    <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-slate-950">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.8"
+        stroke="currentColor"
+        class="h-8 w-8 text-cyan-400"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9.75 17 9 20.25m6-3.25.75 3.25M3 13.5h18M5.25 4.5h13.5A2.25 2.25 0 0 1 21 6.75v9a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15.75v-9A2.25 2.25 0 0 1 5.25 4.5Z"
+        />
+      </svg>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-black text-slate-950">
+        Tecnología propia
+      </h3>
+
+      <p class="mt-2 text-slate-700">
+        Dashboard unificado para inventario, tracking y logística inversa.
+      </p>
+    </div>
+
+  </article>
+
+  <!-- E-commerce -->
+  <article class="flex gap-6 rounded-[2rem] bg-white p-7 shadow-xl shadow-slate-200/70 ring-1 ring-slate-200">
+
+    <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-slate-950">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.8"
+        stroke="currentColor"
+        class="h-8 w-8 text-cyan-400"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2.25 3h1.386a1.5 1.5 0 0 1 1.415 1.025L5.76 6.75m0 0h12.99m-12.99 0L7.5 14.25m11.25-7.5-1.5 7.5H7.5m0 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm9 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
+        />
+      </svg>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-black text-slate-950">
+        Especialización e-commerce
+      </h3>
+
+      <p class="mt-2 text-slate-700">
+        Experiencia logística en moda, electrónica y cosmética.
+      </p>
+    </div>
+
+  </article>
+
+</div>
+    </section>
+
+    <section id="contacto" class="bg-white px-6 pb-24 sm:px-8 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-stretch">
+          <div
+            class="h-full rounded-[2rem] bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950 p-8 text-white shadow-2xl sm:p-12">
+            <p class="text-sm font-black uppercase tracking-[0.22em] text-cyan-300">Contacto</p>
+            <h2 class="mt-4 text-4xl font-black tracking-tight">Solicita información para tu operación logística</h2>
+            <p class="mt-6 text-lg leading-8 text-slate-300">Completa el formulario y nuestro equipo comercial revisará
+              tus necesidades.</p>
+
+            <div class="mt-12 space-y-7 text-slate-200">
+              <p><strong class="text-cyan-300">Email:</strong> comercial@trackflow.com</p>
+              <p><strong class="text-cyan-300">Los Ángeles:</strong> +1 213 555 0147</p>
+              <p><strong class="text-cyan-300">Zaragoza:</strong> +34 976 123 456</p>
+            </div>
+          </div>
+
+          <form id="contacto-form"
+            class="rounded-[2rem] bg-white p-6 shadow-2xl shadow-slate-200/80 ring-1 ring-slate-200 sm:p-8 lg:p-10"
+            novalidate>
+            <div id="form-success"
+              class="mb-6 hidden rounded-3xl bg-emerald-50 border border-emerald-200 p-4 text-emerald-900" role="status"
+              aria-live="polite"></div>
+
+            <div class="grid gap-6 lg:grid-cols-2">
+              <div>
+                <label for="empresa" class="block text-sm font-bold text-slate-900">Nombre de la empresa <span
+                    aria-label="requerido">*</span></label>
+                <input id="empresa" name="empresa" type="text" autocomplete="organization" required
+                  placeholder="Ej. Empresa Comercial" aria-describedby="error-empresa"
+                  class="mt-2 block w-full min-h-[48px] rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200" />
+                <p id="error-empresa" class="mt-2 hidden text-sm text-red-600">El nombre de la empresa debe tener al
+                  menos 2 caracteres</p>
+              </div>
+
+              <div>
+                <label for="contacto" class="block text-sm font-bold text-slate-900">Persona de contacto <span
+                    aria-label="requerido">*</span></label>
+                <input id="contacto" name="contacto" type="text" autocomplete="name" required
+                  placeholder="Ej. Patricia Álvarez" aria-describedby="error-contacto"
+                  class="mt-2 block w-full min-h-[48px] rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200" />
+                <p id="error-contacto" class="mt-2 hidden text-sm text-red-600">Ingresa nombre y apellido del contacto
+                </p>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-bold text-slate-900">Email corporativo <span
+                    aria-label="requerido">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required
+                  placeholder="ejemplo@empresa.com" aria-describedby="error-email"
+                  class="mt-2 block w-full min-h-[48px] rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200" />
+                <p id="error-email" class="mt-2 hidden text-sm text-red-600">Ingresa un email corporativo válido
+                  (ejemplo: nombre@empresa.com)</p>
+              </div>
+
+              <div>
+                <label for="telefono" class="block text-sm font-bold text-slate-900">Teléfono <span
+                    aria-label="requerido">*</span></label>
+                <input id="telefono" name="telefono" type="tel" autocomplete="tel" required
+                  placeholder="+1 213 555 0147" aria-describedby="error-telefono"
+                  class="mt-2 block w-full min-h-[48px] rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200" />
+                <p id="error-telefono" class="mt-2 hidden text-sm text-red-600">El teléfono debe incluir código de país
+                  (ejemplo: +1 213 555 0147)</p>
+              </div>
+
+              <div>
+                <label for="sitio" class="block text-sm font-bold text-slate-900">Sitio web de la empresa</label>
+                <input id="sitio" name="sitio" type="url" autocomplete="url" placeholder="https://"
+                  aria-describedby="error-sitio"
+                  class="mt-2 block w-full min-h-[48px] rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200" />
+                <p id="error-sitio" class="mt-2 hidden text-sm text-red-600">Si incluyes sitio web, debe ser una URL
+                  válida</p>
+              </div>
+
+              <div>
+                <label for="pais" class="block text-sm font-bold text-slate-900">País de operación principal <span
+                    aria-label="requerido">*</span></label>
+                <select id="pais" name="pais" required aria-describedby="error-pais"
+                  class="mt-2 block w-full min-h-[48px] rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200">
+                  <option value="">Selecciona una opción</option>
+                  <option value="estados-unidos">Estados Unidos</option>
+                  <option value="espana">España</option>
+                  <option value="ambos">Ambos</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <p id="error-pais" class="mt-2 hidden text-sm text-red-600">Selecciona el país de operación principal
+                </p>
+              </div>
+
+              <div>
+                <label for="producto" class="block text-sm font-bold text-slate-900">Tipo de producto <span
+                    aria-label="requerido">*</span></label>
+                <select id="producto" name="producto" required aria-describedby="error-producto"
+                  class="mt-2 block w-full min-h-[48px] rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200">
+                  <option value="">Selecciona una opción</option>
+                  <option value="moda">Moda</option>
+                  <option value="electronica">Electrónica</option>
+                  <option value="cosmetica">Cosmética</option>
+                  <option value="alimentacion">Alimentación</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <p id="error-producto" class="mt-2 hidden text-sm text-red-600">Selecciona el tipo de producto que
+                  manejas</p>
+              </div>
+
+              <div>
+                <label for="volumen" class="block text-sm font-bold text-slate-900">Volumen mensual estimado de envíos
+                  <span aria-label="requerido">*</span></label>
+                <select id="volumen" name="volumen" required aria-describedby="error-volumen warning-volumen"
+                  class="mt-2 block w-full min-h-[48px] rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200">
+                  <option value="">Selecciona un rango</option>
+                  <option value="0-100">0-100</option>
+                  <option value="101-500">101-500</option>
+                  <option value="501-2000">501-2000</option>
+                  <option value="2000+">2000+</option>
+                  <option value="no-estoy-seguro">No estoy seguro</option>
+                </select>
+                <p id="error-volumen" class="mt-2 hidden text-sm text-red-600">Selecciona el volumen mensual estimado
+                </p>
+                <p id="warning-volumen" class="mt-2 hidden text-sm text-amber-700">Para volúmenes menores a 100 envíos
+                  mensuales, nuestros servicios podrían no ser la solución más eficiente. ¿Seguro que quieres continuar?
+                </p>
+              </div>
+
+              <fieldset class="rounded-xl border border-slate-200 bg-white p-5">
+                <legend class="text-sm font-bold text-slate-900">Servicios de interés <span
+                    aria-label="requerido">*</span></legend>
+                <div class="mt-4 space-y-3 text-sm text-slate-700" aria-describedby="error-servicios">
+                  <label class="flex items-center gap-3">
+                    <input type="checkbox" name="servicios" value="almacenaje"
+                      class="h-4 w-4 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500" />
+                    <span>Almacenaje</span>
+                  </label>
+                  <label class="flex items-center gap-3">
+                    <input type="checkbox" name="servicios" value="ultima-milla"
+                      class="h-4 w-4 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500" />
+                    <span>Última milla</span>
+                  </label>
+                  <label class="flex items-center gap-3">
+                    <input type="checkbox" name="servicios" value="logistica-inversa"
+                      class="h-4 w-4 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500" />
+                    <span>Logística inversa</span>
+                  </label>
+                </div>
+                <p id="error-servicios" class="mt-3 hidden text-sm text-red-600">Selecciona al menos un servicio de
+                  interés</p>
+              </fieldset>
+
+              <fieldset class="rounded-xl border border-slate-200 bg-white p-5">
+                <legend class="text-sm font-bold text-slate-900">¿Actualmente trabajas con otro 3PL? <span
+                    aria-label="requerido">*</span></legend>
+                <div class="mt-4 space-y-3 text-sm text-slate-700" aria-describedby="error-otro3pl">
+                  <label class="flex items-center gap-3">
                     <input type="radio" name="otro3pl" value="si" class="h-4 w-4 text-cyan-600 focus:ring-cyan-500" />
                     <span>Sí</span>
                   </label>
-                  <label class="inline-flex min-h-[48px] items-center gap-3">
+                  <label class="flex items-center gap-3">
                     <input type="radio" name="otro3pl" value="no" class="h-4 w-4 text-cyan-600 focus:ring-cyan-500" />
                     <span>No</span>
                   </label>
+                  <label class="flex items-center gap-3">
+                    <input type="radio" name="otro3pl" value="evaluando"
+                      class="h-4 w-4 text-cyan-600 focus:ring-cyan-500" />
+                    <span>Estoy evaluando opciones</span>
+                  </label>
                 </div>
-                <p id="error-otro3pl" class="mt-3 hidden text-sm text-red-600">Selecciona una opción.</p>
+                <p id="error-otro3pl" class="mt-3 hidden text-sm text-red-600">Indica si actualmente trabajas con otro
+                  proveedor logístico</p>
               </fieldset>
+            </div>
 
-              <div class="mb-6">
-                <label for="comentarios" class="block text-base font-semibold text-slate-900">Comentarios o necesidades específicas (máximo 500 caracteres)</label>
-                <div class="relative">
-                  <textarea id="comentarios" name="comentarios" rows="5" maxlength="500" aria-describedby="error-comentarios contador-comentarios" class="mt-2 block w-full min-h-[120px] rounded-2xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200"></textarea>
-                  <p id="contador-comentarios" class="mt-2 text-xs text-slate-500" aria-live="polite" aria-atomic="true"><span id="comentarios-count">0</span>/500 caracteres</p>
+            <div class="mt-6">
+              <label for="comentarios" class="block text-sm font-bold text-slate-900">Comentarios o necesidades
+                específicas</label>
+              <textarea id="comentarios" name="comentarios" rows="4" maxlength="500"
+                placeholder="Cuéntanos sobre tus necesidades... (máx. 500 caracteres)"
+                aria-describedby="error-comentarios contador-comentarios"
+                class="mt-2 block w-full min-h-[110px] rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200"></textarea>
+              <p id="contador-comentarios" class="mt-2 text-xs text-slate-500" aria-live="polite" aria-atomic="true">
+                <span id="comentarios-count">0</span>/500 caracteres
+              </p>
+              <p id="error-comentarios" class="mt-2 hidden text-sm text-red-600">Los comentarios no pueden exceder 500
+                caracteres</p>
+            </div>
+
+            <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <div class="flex items-start gap-3 text-sm text-slate-700">
+                  <input id="privacidad" name="privacidad" type="checkbox" required
+                    aria-describedby="error-privacidad privacidad-desc"
+                    class="mt-1 h-4 w-4 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500" />
+                  <label for="privacidad" class="font-bold">Acepto política de privacidad <span
+                      aria-label="requerido">*</span></label>
                 </div>
-                <p id="error-comentarios" class="mt-2 hidden text-sm text-red-600">Comparte tus necesidades para ofrecerte una propuesta adecuada.</p>
+                <p id="privacidad-desc" class="mt-1 text-xs text-slate-500">Necesario para procesar tu solicitud de
+                  información.</p>
+                <p id="error-privacidad" class="mt-1 hidden text-sm text-red-600">Debes aceptar la política de
+                  privacidad para continuar</p>
               </div>
 
-              <div class="mb-6 flex items-start gap-3 text-base text-slate-700">
-                <input id="privacidad" name="privacidad" type="checkbox" required aria-describedby="error-privacidad privacidad-desc" class="mt-2 h-4 w-4 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500" />
-                <label for="privacidad" class="font-medium">Acepto la política de privacidad y el tratamiento de mis datos. <span aria-label="requerido">*</span></label>
+              <div class="flex gap-3">
+                <button type="reset" id="cancel-button"
+                  class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-7 py-4 text-base font-bold text-slate-700 shadow-sm transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-cyan-200">
+                  Cancelar
+                </button>
+                <button type="submit"
+                  class="inline-flex items-center justify-center rounded-xl bg-cyan-600 px-7 py-4 text-base font-bold text-white shadow-lg transition hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200">
+                  Enviar solicitud
+                </button>
               </div>
-              <p id="privacidad-desc" class="mb-3 text-xs text-slate-500">Necesario para procesar tu solicitud de información.</p>
-              <p id="error-privacidad" class="mb-6 hidden text-sm text-red-600">Debes aceptar la política de privacidad para continuar.</p>
-
-              <button type="submit" class="inline-flex w-full items-center justify-center rounded-full bg-cyan-600 px-6 py-4 text-base font-semibold text-white shadow-lg transition hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200 min-h-[48px]">Enviar solicitud</button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="border-t border-slate-200 bg-slate-950 text-slate-300">
-      <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <p class="text-sm">© 2026 TrackFlow. Soluciones logísticas para empresas.</p>
-          <nav aria-label="Enlaces de pie de página">
-            <ul class="flex flex-wrap items-center gap-4 text-sm">
-              <li><a href="#inicio" class="px-2 py-2 rounded-md text-base hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">Inicio</a></li>
-              <li><a href="#servicios" class="px-2 py-2 rounded-md text-base hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">Servicios</a></li>
-              <li><a href="#cobertura" class="px-2 py-2 rounded-md text-base hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">Cobertura</a></li>
-              <li><a href="#contacto" class="px-2 py-2 rounded-md text-base hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">Contacto</a></li>
-            </ul>
-          </nav>
+            </div>
+          </form>
         </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script src="./main.js" defer></script>
-  </body>
+  <footer class="border-t border-slate-800 bg-gradient-to-r from-slate-950 via-slate-900 to-cyan-950 text-slate-300">
+    <div class="mx-auto max-w-7xl px-6 py-10 sm:px-8 lg:px-8">
+      <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <p class="text-sm">© 2025 TrackFlow. Todos los derechos reservados.</p>
+        <nav aria-label="Enlaces de pie de página">
+          <ul class="flex flex-wrap items-center gap-6 text-sm">
+            <li><a href="#inicio"
+                class="rounded-md px-2 py-2 font-semibold hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">Inicio</a>
+            </li>
+            <li><a href="#servicios"
+                class="rounded-md px-2 py-2 font-semibold hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">Servicios</a>
+            </li>
+            <li><a href="#cobertura"
+                class="rounded-md px-2 py-2 font-semibold hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">Cobertura</a>
+            </li>
+            <li><a href="#contacto"
+                class="rounded-md px-2 py-2 font-semibold hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">Contacto</a>
+            </li>
+            <li><a href="https://linkedin.com/company/trackflow"
+                class="rounded-md px-2 py-2 font-semibold hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">LinkedIn</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>

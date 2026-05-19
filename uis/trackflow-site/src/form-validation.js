@@ -18,11 +18,12 @@ class FormValidator {
   }
 
   initializeEventListeners() {
-    // Form submission
     this.form.addEventListener('submit', (e) => this.handleSubmit(e));
 
-    // Real-time validation and character counter
-    const countableFields = ['comentarios'];
+    this.form.addEventListener('reset', () => {
+      setTimeout(() => this.clearFormState(), 0);
+    });
+
     const validableFields = [
       'empresa',
       'contacto',
@@ -40,33 +41,43 @@ class FormValidator {
 
     validableFields.forEach((fieldName) => {
       const field = this.form.elements[fieldName];
-      if (field) {
-        if (fieldName === 'comentarios') {
-          field.addEventListener('input', () => this.updateCharacterCount(fieldName));
-          field.addEventListener('blur', () => this.validateField(fieldName));
-        } else if (fieldName === 'volumen') {
-          field.addEventListener('change', () => {
-            this.validateField(fieldName);
-            this.checkVolumeWarning(fieldName);
-          });
-        } else {
-          field.addEventListener('blur', () => this.validateField(fieldName));
-        }
+
+      if (!field) return;
+
+      if (fieldName === 'comentarios') {
+        field.addEventListener('input', () => {
+          this.updateCharacterCount(fieldName);
+          this.validateField(fieldName);
+        });
+      } else if (fieldName === 'volumen') {
+        field.addEventListener('change', () => {
+          this.validateField(fieldName);
+          this.checkVolumeWarning(fieldName);
+        });
+      } else if (fieldName === 'servicios' || fieldName === 'otro3pl') {
+        this.form.querySelectorAll(`input[name="${fieldName}"]`).forEach((input) => {
+          input.addEventListener('change', () => this.validateField(fieldName));
+        });
+      } else {
+        field.addEventListener('blur', () => this.validateField(fieldName));
+        field.addEventListener('input', () => this.validateField(fieldName));
       }
     });
   }
 
   updateCharacterCount(fieldName) {
-    const field = this.form.elements[fieldName];
-    const countElement = document.getElementById(`${fieldName}-count`);
-    if (countElement) {
-      countElement.textContent = field.value.length;
-    }
+  const field = this.form.elements[fieldName];
+  const countElement = document.getElementById(`${fieldName}-count`);
+
+  if (field && countElement) {
+    countElement.textContent = field.value.length;
   }
+}
 
   checkVolumeWarning(fieldName) {
     const field = this.form.elements[fieldName];
     const warningElement = document.getElementById('warning-volumen');
+
     if (field.value === '0-100' && warningElement) {
       warningElement.classList.remove('hidden');
     } else if (warningElement) {
@@ -78,32 +89,47 @@ class FormValidator {
     e.preventDefault();
     this.errors = {};
 
-    // Validate all fields
-    this.validateField('empresa');
-    this.validateField('contacto');
-    this.validateField('email');
-    this.validateField('telefono');
-    this.validateField('sitio');
-    this.validateField('pais');
-    this.validateField('producto');
-    this.validateField('volumen');
-    this.validateField('servicios');
-    this.validateField('otro3pl');
-    this.validateField('comentarios');
-    this.validateField('privacidad');
+    const fieldsToValidate = [
+      'empresa',
+      'contacto',
+      'email',
+      'telefono',
+      'sitio',
+      'pais',
+      'producto',
+      'volumen',
+      'servicios',
+      'otro3pl',
+      'comentarios',
+      'privacidad'
+    ];
 
-    // Check if there are any errors
-    if (Object.keys(this.errors).length === 0) {
+    const isFormValid = fieldsToValidate
+      .map((fieldName) => this.validateField(fieldName))
+      .every(Boolean);
+
+    if (isFormValid) {
       this.showSuccess();
-      // Optionally reset form and scroll to success message
       this.form.reset();
+      this.clearFormState(false);
       this.successMessage.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // Focus on first error field
-      const firstErrorField = this.form.elements[Object.keys(this.errors)[0]];
+      const firstErrorFieldName = Object.keys(this.errors)[0];
+      const firstErrorField = this.form.elements[firstErrorFieldName];
+
       if (firstErrorField) {
-        firstErrorField.focus();
-        firstErrorField.scrollIntoView({ behavior: 'smooth' });
+        if (typeof firstErrorField.focus === 'function') {
+          firstErrorField.focus();
+        } else {
+          firstErrorField[0]?.focus();
+        }
+
+        const target =
+          typeof firstErrorField.scrollIntoView === 'function'
+            ? firstErrorField
+            : firstErrorField[0];
+
+        target?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }
   }
@@ -114,7 +140,13 @@ class FormValidator {
 
     const errorElement = document.getElementById(`error-${fieldName}`);
     let isValid = true;
-    let value = fieldName === 'privacidad' ? field.checked : field.value.trim();
+
+    const value =
+      fieldName === 'privacidad'
+        ? field.checked
+        : typeof field.value === 'string'
+          ? field.value.trim()
+          : '';
 
     switch (fieldName) {
       case 'empresa':
@@ -122,57 +154,40 @@ class FormValidator {
         break;
 
       case 'contacto':
-        // At least two words (name and surname)
-        isValid = value.split(/\s+/).length >= 2 && value.length > 0;
+        isValid = /^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+(?:\s+[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)+$/.test(value);
         break;
 
       case 'email':
-        // Email validation regex
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        isValid = emailRegex.test(value);
+        isValid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
         break;
 
       case 'telefono':
-        // Must start with + followed by country code and at least 9 digits total
-        const phoneRegex = /^\+\d{1,3}\d{6,14}$/;
-        isValid = phoneRegex.test(value.replace(/[\s\-()]/g, ''));
+        isValid = /^\+\d{1,3}[\s-]?\d[\d\s-]{6,16}$/.test(value);
         break;
 
       case 'sitio':
-        // If provided, must start with http:// or https://
-        if (value.length > 0) {
-          isValid = value.startsWith('http://') || value.startsWith('https://');
-        }
+        isValid = value === '' || /^https?:\/\/.+\..+/.test(value);
         break;
 
       case 'pais':
-        isValid = value.length > 0;
-        break;
-
       case 'producto':
-        isValid = value.length > 0;
-        break;
-
       case 'volumen':
         isValid = value.length > 0;
         break;
 
       case 'servicios':
-        isValid = value.length > 0;
+        isValid = this.form.querySelectorAll('input[name="servicios"]:checked').length > 0;
         break;
 
       case 'otro3pl':
-        // Check if any radio is selected
         isValid = this.form.querySelector('input[name="otro3pl"]:checked') !== null;
         break;
 
       case 'comentarios':
-        // Optional but max 500 characters
         isValid = value.length <= 500;
         break;
 
       case 'privacidad':
-        // Must be checked
         isValid = value === true;
         break;
 
@@ -181,26 +196,44 @@ class FormValidator {
     }
 
     if (isValid) {
-      if (errorElement) {
-        errorElement.classList.add('hidden');
-        errorElement.setAttribute('aria-hidden', 'true');
-      }
-      delete this.errors[fieldName];
+      this.clearError(fieldName, field, errorElement);
     } else {
-      this.errors[fieldName] = true;
-      if (errorElement) {
-        errorElement.classList.remove('hidden');
-        errorElement.setAttribute('aria-hidden', 'false');
-      }
+      this.showError(fieldName, field, errorElement);
     }
-
-    // Update field styling
-    this.updateFieldStyling(field, isValid);
 
     return isValid;
   }
 
+  showError(fieldName, field, errorElement) {
+    this.errors[fieldName] = true;
+
+    if (errorElement) {
+      errorElement.classList.remove('hidden');
+      errorElement.setAttribute('aria-hidden', 'false');
+    }
+
+    this.updateFieldStyling(field, false);
+  }
+
+  clearError(fieldName, field, errorElement) {
+    delete this.errors[fieldName];
+
+    if (errorElement) {
+      errorElement.classList.add('hidden');
+      errorElement.setAttribute('aria-hidden', 'true');
+    }
+
+    this.updateFieldStyling(field, true);
+  }
+
   updateFieldStyling(field, isValid) {
+    if (field instanceof RadioNodeList) {
+      field.forEach((input) => {
+        input.setAttribute('aria-invalid', String(!isValid));
+      });
+      return;
+    }
+
     if (isValid) {
       field.classList.remove('border-red-600', 'bg-red-50');
       field.setAttribute('aria-invalid', 'false');
@@ -210,26 +243,72 @@ class FormValidator {
     }
   }
 
+  clearFormState(hideSuccess = true) {
+    this.errors = {};
+
+    [
+      'empresa',
+      'contacto',
+      'email',
+      'telefono',
+      'sitio',
+      'pais',
+      'producto',
+      'volumen',
+      'servicios',
+      'otro3pl',
+      'comentarios',
+      'privacidad'
+    ].forEach((fieldName) => {
+      const field = this.form.elements[fieldName];
+      const errorElement = document.getElementById(`error-${fieldName}`);
+
+      if (errorElement) {
+        errorElement.classList.add('hidden');
+        errorElement.setAttribute('aria-hidden', 'true');
+      }
+
+      if (field) {
+        this.updateFieldStyling(field, true);
+      }
+    });
+
+    const warningElement = document.getElementById('warning-volumen');
+    if (warningElement) {
+      warningElement.classList.add('hidden');
+    }
+
+    this.updateCharacterCount('comentarios');
+
+    if (hideSuccess && this.successMessage) {
+      this.successMessage.classList.add('hidden');
+      this.successMessage.textContent = '';
+    }
+  }
+
   showSuccess() {
     this.successMessage.textContent = '';
+
     const successTitle = document.createElement('strong');
-    successTitle.textContent = '¡Solicitud enviada correctamente!';
+    successTitle.textContent = '¡Gracias por tu interés en TrackFlow!';
+
     const successText = document.createElement('p');
     successText.className = 'mt-2 text-sm';
-    successText.textContent = 'Gracias por contactar con TrackFlow. Nos pondremos en contacto en las próximas 24 horas con una propuesta personalizada para tu operación logística.';
-    
+    successText.textContent =
+      'Hemos recibido tu solicitud. Nuestro equipo comercial revisará tu información y te contactará en las próximas 24-48 horas para agendar una llamada y conocer tus necesidades logísticas en detalle.';
+
+    const urgentText = document.createElement('p');
+    urgentText.className = 'mt-2 text-sm';
+    urgentText.textContent =
+      'Si tienes alguna consulta urgente, escríbenos directamente a comercial@trackflow.com';
+
     this.successMessage.appendChild(successTitle);
     this.successMessage.appendChild(successText);
+    this.successMessage.appendChild(urgentText);
     this.successMessage.classList.remove('hidden');
-
-    // Auto-hide after 8 seconds
-    setTimeout(() => {
-      this.successMessage.classList.add('hidden');
-    }, 8000);
   }
 }
 
-// Initialize form validator when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   new FormValidator('contacto-form');
 });
